@@ -1,0 +1,7 @@
+echo "venv/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.py[cod]" >> .gitignore
+echo "*.log" >> .gitignore
+echo "db.sqlite3" >> .gitignore
+echo "/media" >> .gitignore
+echo "*.swp" >> .gitignore
