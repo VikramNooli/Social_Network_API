@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^*ykrj9)@z#mwrv-7kjd)2n5xe6h+d@8l_z+@!ip#or5wta=2i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '0.0.0.0']
 
 
 # Application definition
@@ -102,7 +102,7 @@ DATABASES = {
         'NAME':'social_network',
         'USER': 'vikram',
         'PASSWORD': 'qwaszx@123',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432', },
 }
 
