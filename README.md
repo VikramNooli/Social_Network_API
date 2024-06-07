@@ -38,12 +38,18 @@ Make sure you have Docker and Docker Compose installed on your system. If not, y
 
 You can now test the API endpoints using the POSTMAN tool or any other API testing tool of your choice.
 
-## API Endpoints
+### YOU CAN ACCESS PSQL DB by below command 
+psql -h localhost -p 5433 -U vikram -d social_network
 
-Here are some key endpoints you can test:
+### After running docker you will able test each endpoints in postman.
+### You can export "Social_Network_API.postman_collection.json" file in postman where I have tested all the endpoints.
+### Except Login and SignUp All the api should be called with Authorization token in headers section of POSTMAN.
+### YOU WILL GET Authorization token upon SignUp or Login.
 
+
+for example:
 ### User Signup
-- Endpoint: `/api/signup/`
+- Endpoint: `http://0.0.0.0:8000/api/signup/`
 - Method: `POST`
 - Request Body:
   ```json
@@ -54,7 +60,7 @@ Here are some key endpoints you can test:
   }
 
 ### User Login
-- Endpoint:  '/api/login/'
+- Endpoint:  'http://0.0.0.0:8000/api/login/'
 - Method: `POST`
 - Request Body:
 ```json
@@ -62,3 +68,5 @@ Here are some key endpoints you can test:
   "email": "user@example.com",
   "password": "password123"
 }
+
+

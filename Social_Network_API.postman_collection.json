@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "1b5e5542-c09f-442d-99b1-873854991f68",
+		"name": "Social_Network_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35994877"
+	},
+	"item": [
+		{
+			"name": "http://0.0.0.0:8000/api/signup/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"vikramnooli2000@gmail.com\",\n    \"password\": \"qwaszx@123\",\n    \"username\":\"VikramNooli\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/signup/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/api/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"vikramnooli2000@gmail.com\",\n    \"password\": \"qwaszx@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/api/search/?q=vikramnooli2000@gmail.com",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fbc813e493974817c6e5e109bc17527f202f99d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/search/?q=vikr",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "vikr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/api/search/?q=vikr",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fbc813e493974817c6e5e109bc17527f202f99d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/search/?q=vikr",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "vikr"
+						}
+					]
+				},
+				"description": "Search based on user name"
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/api/send-friend-request/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fbc813e493974817c6e5e109bc17527f202f99d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to_user_id\": 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/send-friend-request/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"send-friend-request",
+						""
+					]
+				},
+				"description": "sending friend request to a user with user_id=1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/api/respond-to-friend-request/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fbc813e493974817c6e5e109bc17527f202f99d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/friends/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friends",
+						""
+					]
+				},
+				"description": "fried request which was sent by user_id 3 to 1 was accepted by user_id 1."
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/api/friends/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3cdaa7b1ba1c19e05675550cf2f026f8ce63cc3c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/pending-requests/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pending-requests",
+						""
+					]
+				},
+				"description": "list of friends of the current user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/api/pending-requests/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3cdaa7b1ba1c19e05675550cf2f026f8ce63cc3c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/pending-requests/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pending-requests",
+						""
+					]
+				},
+				"description": "list of the pending friend requests of the current user."
+			},
+			"response": []
+		}
+	]
+}
