@@ -25,7 +25,7 @@ def signup(request):
         if serializer.is_valid():
             user = serializer.save()
             token, created = Token.objects.get_or_create(user=user)
-            return Response({'token': token.key,'message': 'User with mail address %s created succefully'%user.email}, status=status.HTTP_201_CREATED)
+            return Response({'token': token.key,'message': 'User with mail address %s created successfully'%user.email}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
