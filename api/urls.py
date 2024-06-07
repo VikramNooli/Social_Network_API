@@ -16,12 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import signup, login, protected_view,search_users,send_friend_request, respond_to_friend_request, list_friends, list_pending_requests
+from .views import signup, login, search_users, send_friend_request, respond_to_friend_request, list_friends, list_pending_requests
 
 urlpatterns = [
     path('signup/', signup, name='signup'),
     path('login/', login, name='login'),
-    path('protected/', protected_view, name='protected'),
     path('search/', search_users, name='search_users'),
     path('send-friend-request/', send_friend_request, name='send_friend_request'),
     path('respond-to-friend-request/', respond_to_friend_request, name='respond_to_friend_request'),
