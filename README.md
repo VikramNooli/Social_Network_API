@@ -9,15 +9,13 @@ Make sure you have Docker and Docker Compose installed on your system. If not, y
 ### Clone the Repository
 
 1. Clone the repository using the following command:
-    ```bash
-    
+    ```
     git clone https://github.com/VikramNooli/Social_Network_API.git
     
     ```
 
 2. Change the directory to the project folder:
-    ```bash
-    
+    ```
     cd Social_Network_API
     
     ```
@@ -25,14 +23,12 @@ Make sure you have Docker and Docker Compose installed on your system. If not, y
 ### Setup and Run the Project
 
 1. Build and start the Docker containers:
-    ```bash
-    docker-compose up --build
-    ```
+  sudo docker-compose up --build
+    
 
 2. If you encounter unapplied migrations errors while running the above command, open a new terminal window and run the following command to apply migrations:
-    ```bash
-    docker-compose exec web python manage.py migrate
-    ```
+  sudo docker-compose exec web python manage.py migrate
+  
 
 ### Testing the API
 
